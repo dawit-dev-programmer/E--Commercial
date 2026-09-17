@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habsha Store</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+           position: absolute;
+           animation: inpage .5s ease;
+            background-color: #c0caf0; /* በፎቶው ላይ ያለው ሰማያዊ አስተየይት background */
+            padding: 10px;
+        }
+
+        /* ወደ ጎን 3 Card እንዲሆን የሚያደርገው Grid Layout */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* የነጠላ እቃዎች Card Styling */
+        .product-card {
+           opacity: 0;
+    transform: translateY(100px) scale(0.85);
+
+    animation: photoReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+            background-color: transparent;
+            text-align: center;
+
+        }
+
+        /* የምስሉ ማሳያ ሳጥን */
+        .image-box {
+            width: 100%;
+            height: 140px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            margin-bottom: 6px;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* የጽሑፍ መግለጫዎች */
+        .product-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 2px;
+        }
+
+        .product-price {
+            font-size: 12px;
+            color: #333333;
+            margin-bottom: 6px;
+        }
+
+        /* በ Button ምትክ የገባው <a> Tag Styling */
+        .add-cart-btn {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            padding: 6px 0;
+            background-color: #f7d572; /* የብጫው ከለር */
+            color: #000000;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .add-cart-btn:hover {
+            background-color: #e6c35c;
+        }
+
+        .add-cart-btn:active {
+            transform: scale(0.96);
+        }
+
+        /* Lag እንዳያደርግ GPU Accelerated Keyframes */
+        @keyframes photoReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(100px) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+        /* የስልክ ስክሪን በጣም ጥብብ ካለ የፎቶውን ቁመት ያስተካክላል */
+        @media (max-width: 380px) {
+            .image-box {
+                height: 110px;
+            }
+            .product-title, .product-price, .add-cart-btn {
+                font-size: 11px;
+            }
+        }
+       @keyframes inpage {
+          from {
+             transform: translateY(-50px);
+             opacity: -1;
+          }
+          to {
+             transform: translateY(0);
+          }
+       }
+    </style>
+</head>
+<body>
+
+    <div class="product-grid">
+
+        <!-- 1 - 10 -->
+        <div class="product-card">
+            <div class="image-box"><img src="1.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="2.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="3.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="4.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="5.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="6.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="7.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="8.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="9.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+        <div class="product-card">
+            <div class="image-box"><img src="10.jpg" alt="Outfit"></div>
+            <div class="product-title">Habsha Outfit</div>
+            <div class="product-price">Price: 1000 ETB</div>
+            <a href="Payment.html" class="add-cart-btn">Add Cart 🛒</a>
+        </div>
+
+        <!-- 11 - 20 -->
+        <div class="product-card"><div class="image-box"><img src="11.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="12.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="13.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="14.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="15.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="16.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="17.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="18.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="19.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="20.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+
+        <!-- 21 - 30 -->
+        <div class="product-card"><div class="image-box"><img src="21.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="22.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="23.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="24.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="25.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="26.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="27.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="28.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="29.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="30.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+
+        <!-- 31 - 40 -->
+        <div class="product-card"><div class="image-box"><img src="31.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="32.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="33.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="34.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="35.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="36.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="37.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="38.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="39.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="40.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+
+        <!-- 41 - 50 -->
+        <div class="product-card"><div class="image-box"><img src="41.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="42.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="43.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="44.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="45.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="46.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="47.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="48.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="49.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="50.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+
+        <!-- 51 - 60 -->
+        <div class="product-card"><div class="image-box"><img src="51.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="52.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="53.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="54.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="55.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="56.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="57.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="58.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="59.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+        <div class="product-card"><div class="image-box"><img src="60.jpg" alt="Outfit"></div><div class="product-title">Habsha Outfit</div><div class="product-price">Price: 1000 ETB</div><a href="#" class="add-cart-btn">Add Cart 🛒</a></div>
+
+    </div>
+
+</body>
+</html>
