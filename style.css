@@ -1,0 +1,221 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background: #c1cbec;
+}
+#Page-1 {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: heroIn 1s ease both;
+}
+#My-photo {
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   margin-top: 200px;
+}
+#im {
+   position: absolute;
+   margin-top: 350px;
+   margin-left: -64%;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 1.3em;
+   font-weight: 250;
+   letter-spacing: 3px;
+}
+#skill {
+   position: absolute;
+   margin-left: 15px;
+   margin-top: 470px;
+   font-weight: bold;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 2.5em;
+}
+#deve {
+   color: rgba(42, 90, 245, 1);
+   font-weight: bold;
+}
+#title {
+   position: absolute;
+   margin-top: 630px;
+   margin-left: -65px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   line-height: 1.4;
+   width: 300px;
+   color: rgba(105, 124, 181, 1);
+   font-size: 13.5px;
+}
+#getBtn {
+   cursor: none;
+   position: absolute;
+   text-decoration: none;
+   background: #1A216E;
+   padding-left: 40px;
+   padding-top: 5px;
+   border-radius: 15px;
+   margin-left: -30%;
+   color: white;
+   width: 150px;
+   height: 35px;
+   margin-top: 800px;
+   font-weight: 300;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   transition: .2s linear;
+}
+#getBtn:active {
+   background: #030633;
+   transform: scale(1.1)
+     translateY(-5px);
+}
+#learn {
+   position: absolute;
+   margin-top: 800px;
+   margin-left: 150px;
+   color: #797DAC;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   cursor: none;
+}
+#learn:active {
+   color: black;
+}
+#Page-2 {
+   position: absolute;
+   top: 65%;
+   display: flex;
+   margin-left: 25px;
+   gap: 50px;
+   animation: heroIn 1s ease both;
+
+}
+#code-photo {
+   width: 40px;
+   height: 40px;
+   background: rgba(156, 183, 232, 0.64);
+   padding: 7px 7px;
+   border-radius: 10px;
+   margin-left: 50px;
+}
+#code-title {
+   position: absolute;
+   margin-left: 13px;
+   margin-top: 50px;
+   width: 200px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+}
+#code-text {
+   position: absolute;
+   margin-left: 13px;
+   margin-top: 70px;
+   width: 200px;
+   font-size: 13px;
+   color: rgba(91, 102, 122, 1);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#code-text-span {
+   margin-left: 40px;
+}
+#mobile-photo {
+   width: 40px;
+   height: 40px;
+   background: rgba(156, 183, 232, 0.64);
+   padding: 7px 7px;
+   border-radius: 10px;
+   margin-left: 100px;
+}
+#mobile-title {
+   position: absolute;
+   margin-left: 200px;
+   margin-top: 50px;
+   width: 200px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+}
+#mobile-text {
+   position: absolute;
+   margin-left: 200px;
+   margin-top: 70px;
+   width: 150px;
+   font-size: 13px;
+   color: rgba(91, 102, 122, 1);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#mobile-text-span {
+   margin-left: 40px;
+}
+#shop-photo {
+   margin-top: 140px;
+   margin-left: -280px;
+   width: 40px;
+   height: 40px;
+   background: rgba(156, 183, 232, 0.64);
+   padding: 7px 7px;
+   border-radius: 10px;
+}
+#shop-title {
+   width: 200px;
+   position: absolute;
+   margin-left: 25px;
+   margin-top: 190px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+}
+#shop-text {
+   position: absolute;
+   margin-left: 7px;
+   margin-top: 210px;
+   width: 150px;
+   font-size: 13px;
+   color: rgba(91, 102, 122, 1);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#security-photo {
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: rgba(156, 183, 232, 0.64);
+   padding: 7px 7px;
+   border-radius: 10px;
+   margin-top: 141px;
+   margin-left: 240px;
+}
+#security-title {
+   width: 200px;
+   position: absolute;
+   margin-left: 215px;
+   margin-top: 190px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+}
+#security-text {
+   position: absolute;
+   margin-left: 190px;
+   margin-top: 210px;
+   width: 150px;
+   font-size: 13px;
+   color: rgba(91, 102, 122, 1);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#security-text-span {
+   margin-left: 27px;
+}
+@keyframes heroIn {
+   
+   from {
+      opacity: 0;
+      transform: translateY(-40px)
+         rotateY(60deg)
+   }
+   
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   
+} 
