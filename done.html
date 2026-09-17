@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #c1cbec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+           position: absolute;
+           animation: supage .5s ease;
+        }
+
+        .success-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 35px 25px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        /* Animated Success Checkmark Icon */
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background-color: #e6f4ea;
+            color: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 20px auto;
+        }
+
+        .success-card h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .success-card p {
+            color: #6c757d;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        /* Order Details Box */
+        .order-details {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .detail-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-row .label {
+            color: #718096;
+        }
+
+        .detail-row .value {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        /* Action Button */
+        .home-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .home-btn:hover {
+            background-color: #0056b3;
+        }
+       @keyframes supage {
+          from {
+             opacity: -1;
+          }
+          to {
+             opacity: 1;
+          }
+       }
+    </style>
+</head>
+<body>
+
+<div class="success-card">
+    <!-- Success Icon -->
+    <div class="icon-container">
+        &#10004;
+    </div>
+
+    <h2>Payment Successful!</h2>
+    <p>Thank you for your purchase. Your payment reference has been submitted and is being processed.</p>
+
+    <!-- Payment Summary Details -->
+    <div class="order-details">
+        <div class="detail-row">
+            <span class="label">Order Reference:</span>
+            <span class="value">#HAB-98234</span>
+        </div>
+        <div class="detail-row">
+            <span class="label">Payment Status:</span>
+            <span class="value" style="color: #28a745;">Completed</span>
+        </div>
+        <div class="detail-row">
+            <span class="label">Amount Paid:</span>
+            <span class="value">1,000 ETB</span>
+        </div>
+    </div>
+
+    <!-- Return to Home Page Button -->
+    <a href="Payment.html" class="home-btn">Back to Home</a>
+</div>
+
+</body>
+</html>
